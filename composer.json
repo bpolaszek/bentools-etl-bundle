@@ -1,0 +1,22 @@
+{
+  "name": "bentools/etl-bundle",
+  "description": "Symfony 2-3 bundle for bentools/etl.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Beno!t POLASZEK"
+    }
+  ],
+  "require": {
+    "bentools/etl": "~2.3"
+  },
+  "require-dev": {
+    "symfony/symfony": "~2.3|~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "BenTools\\ETL\\ETLBundle\\": "src/ETLBundle"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+services:
+
+    bentools.etl.event_dispatcher.symfony_bridge:
+        class: BenTools\ETL\Event\EventDispatcher\Bridge\Symfony\SymfonyEventDispatcherBridge
+        arguments: ['@event_dispatcher']
+        public: false
+
+    bentools.etl.runner:
+        class: BenTools\ETL\Runner\ETLRunner
+        arguments: ['@logger', '@bentools.etl.event_dispatcher.symfony_bridge']
+
+    bentools.etl.runner_async:
+        class: BenTools\ETL\Runner\AsynchronousRunner
+        arguments: ['@logger', '@bentools.etl.event_dispatcher.symfony_bridge']
+
+    bentools.etl.loader.doctrine_orm:
+        class: BenTools\ETL\Loader\DoctrineORMLoader
+        arguments: ['@doctrine', 1, '@logger']
+        shared: false
