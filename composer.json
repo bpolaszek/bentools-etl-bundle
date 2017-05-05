@@ -1,7 +1,6 @@
 {
   "name": "bentools/etl-bundle",
   "description": "Symfony 2-3 bundle for bentools/etl.",
-  "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
